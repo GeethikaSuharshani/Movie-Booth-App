@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.moviebooth">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MovieBooth">
+        <activity
+            android:name=".IMDbResultsActivity"
+            android:label="IMDb Results"
+            android:parentActivityName=".RatingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.RatingsActivity" />
+        </activity>
+        <activity
+            android:name=".RatingsActivity"
+            android:label="Ratings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:label="Search"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.MainActivity" />
+        </activity>
+        <activity
+            android:name=".UpdateMovieDetailsActivity"
+            android:label="Update Movie Details"
+            android:parentActivityName=".EditMoviesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.EditMoviesActivity" />
+        </activity>
+        <activity
+            android:name=".EditMoviesActivity"
+            android:label="Edit Movies"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FavouritesActivity"
+            android:label="Favourites"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayMoviesActivity"
+            android:label="Display Movies"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterMovieActivity"
+            android:label="Register Movie"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.moviebooth.MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>  <!-- layout for RegisterMovieActivity -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context=".RegisterMovieActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/register_movie_text"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/required_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="@string/required_fields_text"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_title_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:startIconDrawable="@drawable/ic_movie_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/released_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/released_year_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:helperText="A year after 1895"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/HelperMessage"
+            app:helperTextTextColor="@color/primaryTextColor"
+            app:startIconDrawable="@drawable/ic_released_year">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:inputType="number"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/director_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:startIconDrawable="@drawable/ic_director">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cast_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:helperText="Cast list separated by commas"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/HelperMessage"
+            app:helperTextTextColor="@color/primaryTextColor"
+            app:startIconDrawable="@drawable/ic_cast">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rating_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:helperText="Number from 1 to 10"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/HelperMessage"
+            app:helperTextTextColor="@color/primaryTextColor"
+            app:startIconDrawable="@drawable/ic_rating">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:inputType="number"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/review_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:startIconDrawable="@drawable/ic_review">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:onClick="saveData"
+            android:text="@string/save_btn_text" />
+    </LinearLayout>
+</ScrollView>

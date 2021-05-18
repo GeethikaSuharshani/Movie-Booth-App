@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- layout for UpdateMovieDetailsActivity -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context=".UpdateMovieDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/update_movie_details_text"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/required_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="@string/required_fields_text"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/movie_title_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:startIconDrawable="@drawable/ic_movie_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/released_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/released_year_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:helperText="A year after 1895"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/HelperMessage"
+            app:helperTextTextColor="@color/primaryTextColor"
+            app:startIconDrawable="@drawable/ic_released_year">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:inputType="number"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/director_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:startIconDrawable="@drawable/ic_director">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cast_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:helperText="Cast list separated by commas"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/HelperMessage"
+            app:helperTextTextColor="@color/primaryTextColor"
+            app:startIconDrawable="@drawable/ic_cast">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp" />
+
+        <RatingBar
+            android:id="@+id/rating"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:isIndicator="false"
+            android:numStars="10"
+            android:saveEnabled="true"
+            android:stepSize="1"
+            android:theme="@style/RatingBar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/review_hint"
+            app:boxBackgroundColor="@color/primaryTextColor"
+            app:boxStrokeWidthFocused="3dp"
+            app:endIconTint="#FF0000"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorMessage"
+            app:errorTextColor="#FFA8A8"
+            app:startIconDrawable="@drawable/ic_review">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/primaryDarkColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/favourite_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/favourite_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:src="@drawable/ic_favourites" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:onClick="updateData"
+            android:text="@string/update_btn_text" />
+    </LinearLayout>
+</ScrollView>
